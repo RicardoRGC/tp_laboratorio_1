@@ -20,7 +20,8 @@
 #include <string.h>
 #include "tp1bibliotecaP.h"
 
-int main(void) {
+int main(void)
+{
 
 	setbuf(stdout, NULL);
 	int opcion;
@@ -33,7 +34,7 @@ int main(void) {
 	int factorizacionDos;
 	int multiplicacionUno;
 	float numeroUno;
-	int numeroDOS;
+	float numeroDOS;
 	int flagOperandoUno;
 	int flagOperandoDOS;
 	int flagCalculos;
@@ -44,48 +45,51 @@ int main(void) {
 	flagOperandoDOS = 1;
 
 	;
-	do {
+	do
+	{
 
-		if (flagOperandoUno == 1) {
+		if (flagOperandoUno == 1)
+		{
 			printf("\n"
-					"\n"
-					"\n1. Ingresar 1er operando A=x\n");
-
-		} else {
-			printf("\n"
-					"\n"
-					"\n"
-					"1. ingresado A=%f\n", numeroUno);
+							"\n"
+							"\n1. Ingresar 1er operando A=x\n");
 
 		}
-		if (flagOperandoDOS == 1) {
+		else
+		{
+			printf("\n"
+							"\n"
+							"\n"
+							"1. ingresado A=%f\n", numeroUno);
+
+		}
+		if (flagOperandoDOS == 1)
+		{
 			printf("2. Ingresar 2do operando B=x\n");
-		} else {
+		}
+		else
+		{
 			printf("2. ingresado B=%d\n", numeroDOS);
 		}
 
-		if (flagCalculos == 1) {
+		if (flagCalculos == 1)
+		{
 			printf("3. Calcular todas las operaciones	\n");
-		} else {
+		}
+		else
+		{
 			printf("3. Calculos resueltos	\n");
 
 		}
 
 		printf("4. informar resultados \n");
 		printf("5. SALIR: "
-				"\n"
-				"\n");
+						"\n"
+						"\n");
 
+		scanf("%d", &opcion);
 
-
-			scanf("%d", &opcion);
-
-
-
-
-			printf("%d",opcion);
-
-
+		printf("%d", opcion);
 
 		switch (opcion)
 		//int - char
@@ -109,19 +113,20 @@ int main(void) {
 
 		case 2:
 
-			if (flagOperandoUno == 1) {
+			if (flagOperandoUno == 1)
+			{
 				printf("\n" "\n" "\n"
-						"por favor ingrese el primer operando para continuar"
-						"\n");
+								"por favor ingrese el primer operando para continuar"
+								"\n");
 
 				system("pause");
 
-			} else {
+			}
+			else
+			{
 
-					printf("\n ingrese segundo operando\n"); // validacion del segundo
-					scanf("%f", numeroDOS);
-
-
+				printf("\n ingrese segundo operando\n"); // validacion del segundo
+				scanf("%f", numeroDOS);
 
 				flagOperandoDOS = 0;
 
@@ -129,18 +134,20 @@ int main(void) {
 
 			break;
 		case 3:
-			if (flagOperandoUno == 1 || flagOperandoDOS == 1) {
+			if (flagOperandoUno == 1 || flagOperandoDOS == 1)
+			{
 				printf("\n"
-						"por favor ingrese los operando para continuar\n"
-						"\n");
+								"por favor ingrese los operando para continuar\n"
+								"\n");
 				system("pause");
 
-			} else {
+			}
+			else
+			{
 
 				sumaUno = Sumar1(numeroUno, numeroDOS);  // suma.
 				restaUno = calcularResta(numeroUno, numeroDOS);  // division.
-				multiplicacionUno = calcularMultiplicacion(numeroUno,
-						numeroDOS);  // multiplicacion
+				multiplicacionUno = calcularMultiplicacion(numeroUno, numeroDOS);  // multiplicacion
 				divisionUno = calcularDiv(numeroUno, numeroDOS);  //division
 				factorizacionUno = calcularFactorial(numeroUno); // fatorial numeroUNO
 				factorizacionDos = calcularFactorial(numeroDOS); // fatorial numeroDOS
@@ -150,37 +157,39 @@ int main(void) {
 			}
 			break;
 		case 4:
-			if (flagOperandoUno == 1 || flagOperandoDOS == 1) {
+			if (flagOperandoUno == 1 || flagOperandoDOS == 1)
+			{
 				printf("\n"
-						"por favor ingrese los operando para continuar\n"
-						"\n");
+								"por favor ingrese los operando para continuar\n"
+								"\n");
 				system("pause");
 			}
 
-			if (flagCalculos == 1) {
+			if (flagCalculos == 1)
+			{
 				printf("\n"
-						"por favor realizar calculos para continuar\n"
-						"\n");
+								"por favor realizar calculos para continuar\n"
+								"\n");
 				system("pause");
-			} else
+			}
+			else
 
 			{
 				printf("El resultado de %f+%d es: %d\n"
-						"El resultado de %f-%d es: %d\n"
-						"El resultado de %f*%d es: %d\n", numeroUno, numeroDOS,
-						sumaUno, numeroUno, numeroDOS, restaUno, numeroUno,
-						numeroDOS, multiplicacionUno);
-				if (divisionUno == 'N') {
+								"El resultado de %f-%d es: %d\n"
+								"El resultado de %f*%d es: %d\n", numeroUno, numeroDOS, sumaUno, numeroUno,
+								numeroDOS, restaUno, numeroUno, numeroDOS, multiplicacionUno);
+				if (divisionUno == 'N')
+				{
 					printf("no se puede dividir por cero\n");
-				} else {
-					printf("El resultado de %f/%d es: %.2f\n", numeroUno,
-							numeroDOS, divisionUno);
+				}
+				else
+				{
+					printf("El resultado de %f/%d es: %.2f\n", numeroUno, numeroDOS, divisionUno);
 				}
 
-				printf(
-						"El factorial de %f es: %d y El factorial de %d es: %d \n",
-						numeroUno, factorizacionUno, numeroDOS,
-						factorizacionDos);
+				printf("El factorial de %f es: %d y El factorial de %d es: %d \n", numeroUno,
+								factorizacionUno, numeroDOS, factorizacionDos);
 
 				system("pause");
 			}
@@ -194,15 +203,16 @@ int main(void) {
 		default:
 
 			printf("\n"
-					"no ingreso caracter Correcto\n"
-					"\n");
+							"no ingreso caracter Correcto\n"
+							"\n");
 			system("pause");
-
+			
 			break;
-
+			
 		}
-
-	} while (opcion != 5);
-
+		
+	}
+	while (opcion != 5);
+	
 	return 0;
 }
