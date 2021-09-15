@@ -25,81 +25,85 @@ int main(void)
 
 	setbuf(stdout, NULL);
 	int opcion;
-	int sumaUno;
-	int restaUno;
+	int N;
+	float sumaUno;
+	float restaUno;
 	float divisionUno;
-	int factorizacionUno;
-	int factorizacionDos;
-	int multiplicacionUno;
+	float factorizacionUno;
+	float factorizacionDos;
+	float multiplicacionUno;
 	float numeroUno;
 	float numeroDOS;
 	int flagOperandoUno;
 	int flagOperandoDOS;
 	int flagCalculos;
-	//char validacion[5];
+	char validacion[5];
 
 	flagCalculos = 1;
 	flagOperandoUno = 1;
 	flagOperandoDOS = 1;
 
-	;
 	do
 	{
-
-		if (flagOperandoUno == 1)
+		do
 		{
-			printf("\n"
+
+			if (flagOperandoUno == 1)
+			{
+				printf("\n"
+								"\n"
+								"\n1. Ingresar 1er operando A=x\n");
+
+			}
+			else
+			{
+				printf("\n"
+								"\n"
+								"\n"
+								"1. ingresado A=%.2f\n", numeroUno);
+
+			}
+			if (flagOperandoDOS == 1)
+			{
+				printf("2. Ingresar 2do operando B=x\n");
+			}
+			else
+			{
+				printf("2. ingresado B=%.2f\n", numeroDOS);
+			}
+
+			if (flagCalculos == 1)
+			{
+				printf("3. Calcular todas las operaciones	\n");
+			}
+			else
+			{
+				printf("3. Calculos resueltos	\n");
+
+			}
+
+			printf("4. informar resultados \n");
+			printf("5. SALIR: "
 							"\n"
-							"\n1. Ingresar 1er operando A=x\n");
+							"\n");
 
+			//scanf("%d", &opcion);
+			scanf("%s", validacion);
+			N = ValidarNumeroEntero(validacion);
+			//system("pause");
+			system("pause");
 		}
-		else
-		{
-			printf("\n"
-							"\n"
-							"\n"
-							"1. ingresado A=%f\n", numeroUno);
-
-		}
-		if (flagOperandoDOS == 1)
-		{
-			printf("2. Ingresar 2do operando B=x\n");
-		}
-		else
-		{
-			printf("2. ingresado B=%f\n", numeroDOS);
-		}
-
-		if (flagCalculos == 1)
-		{
-			printf("3. Calcular todas las operaciones	\n");
-		}
-		else
-		{
-			printf("3. Calculos resueltos	\n");
-
-		}
-
-		printf("4. informar resultados \n");
-		printf("5. SALIR: "
-						"\n"
-						"\n");
-
-		scanf("%d", &opcion);
-
-		printf("%d", opcion);
+		while (N == 0);
+		opcion = atoi(validacion);
 
 		switch (opcion)
-		//int - char
 		{
 		case 1:
 
-			//do {
-
-			printf("\n ingrese primer operando\n");
-			scanf("%f", &numeroUno);
+			numeroUno = PedirNumeros("\n ingrese primer operando\n", numeroUno);
 
 			flagOperandoUno = 0;
+			flagCalculos = 1;
 
 			break;
 
@@ -117,10 +121,10 @@ int main(void)
 			else
 			{
 
-				printf("\n ingrese segundo operando\n"); // validacion del segundo
-				scanf("%f", &numeroDOS);
+				numeroDOS = PedirNumeros(" \n ingresar operando 2 \n", numeroDOS);
 
 				flagOperandoDOS = 0;
+				flagCalculos = 1;
 
 			}
 
@@ -143,7 +147,6 @@ int main(void)
 				divisionUno = calcularDiv(numeroUno, numeroDOS);  //division
 				factorizacionUno = calcularFactorial(numeroUno); // fatorial numeroUNO
 				factorizacionDos = calcularFactorial(numeroDOS); // fatorial numeroDOS
-
 				flagCalculos = 0;
 
 			}
@@ -166,9 +169,9 @@ int main(void)
 			}
 			else
 			{
-				printf("El resultado de %f+%f es: %d\n"
-								"El resultado de %f-%f es: %d\n"
-								"El resultado de %f*%f es: %d\n", numeroUno, numeroDOS, sumaUno, numeroUno,
+				printf("El resultado de %.2f+%.2f es: %.2f \n"
+								"El resultado de %.2f-%.2f es: %.2f \n"
+								"El resultado de %.2f*%.2f es: %.2f \n", numeroUno, numeroDOS, sumaUno, numeroUno,
 								numeroDOS, restaUno, numeroUno, numeroDOS, multiplicacionUno);
 				if (divisionUno == 'N')
 				{
@@ -176,11 +179,11 @@ int main(void)
 				}
 				else
 				{
-					printf("El resultado de %f/%f es: %.2f\n", numeroUno, numeroDOS, divisionUno);
+					printf("El resultado de %.2f/%.2f es: %.2f\n", numeroUno, numeroDOS, divisionUno);
 				}
 
-				printf("El factorial de %f es: %d \n"
-								"y El factorial de %f es: %d \n", numeroUno, factorizacionUno, numeroDOS,
+				printf("El factorial de %.2f es: %.2f \n"
+								"y El factorial de %.2f es: %.2f \n", numeroUno, factorizacionUno, numeroDOS,
 								factorizacionDos);
 
 				system("pause");

@@ -9,51 +9,64 @@
 #include <ctype.h>
 #include <string.h>
 #include "tp1bibliotecaP.h"
-/*
- int ValidarNumero(char numero[])
- {
- int i;
- for (i = 0; i < strlen(numero); i++)
- {
- if (!(isdigit(numero[i])))
- {
- printf("\n"
- "--------------------------------------------------------------\n"
- " por favor ingrese solo numeros\n");
 
- }
- }
-
- return 1;
- }
- */
-int Sumar1(float numeroUno, int numeroDos) //sumar
+int ValidarNumeroEntero(char numero[])
 {
-	int suma;
+
+	int i;
+
+	for (i = 0; i < strlen(numero); i++)
+	{
+		if (!(isdigit(numero[i])))
+
+		{
+
+			printf("error ingrese numero entero\n");
+
+			return 0;
+		}
+	}
+
+	return 1;
+}
+
+/// @param numeroUno primer numero a sumar
+/// @param numeroDos segundo numero a sumar;
+/// @return retorna la suma de numeroUno y NumeroDos
+float Sumar1(float numeroUno, float numeroDos) //sumar
+{
+	float suma;
 	suma = numeroUno + numeroDos;
-	
+
 	return suma;
 }
-int calcularResta(float numUNO, int numDOS)  // restar
+/// @param numUNO se va a restar por numDOS.
+/// @param numDOS numero para restar
+/// @return retorna la resta de numUNO menos numDOS
+float calcularResta(float numUNO, float numDOS)  // restar
 {
-	int resultadoResta;
+	float resultadoResta;
 	resultadoResta = numUNO - numDOS;
 	return resultadoResta;
 }
-
-int calcularMultiplicacion(float numUNO, int numDOS)   // multiplicar
+/// @param numUNO numeros a multiplicar
+/// @param numDOS numeros a multiplicar
+/// @return retorna resultado de multiplicacion de numUNO y numDOS
+float calcularMultiplicacion(float numUNO, float numDOS)   // multiplicar
 {
-	int resultadoMultip;
+	float resultadoMultip;
 	resultadoMultip = numUNO * numDOS;
 	return resultadoMultip;
 }
-
-float calcularDiv(float numUNO, int numDOS)    // dividir
+/// @param numUNO numero al q se lo va dividir por numDOS
+/// @param numDOS numero divisor
+/// @return reorna la division de numUNO en numDOS
+float calcularDiv(float numUNO, float numDOS)    // dividir
 {
 	float division;
 	if (numDOS != 0)
 	{
-		division = (float) numUNO / numDOS;
+		division = numUNO / numDOS;
 	}
 	else
 	{
@@ -61,27 +74,26 @@ float calcularDiv(float numUNO, int numDOS)    // dividir
 	}
 	return division;
 }
-
-int calcularFactorial(float numero)    // factorial
+/// @param numero a factirizar .
+/// @return retorna el resultado de la factorizacion.
+float calcularFactorial(float numero)    // factorial
 {
-	int multiplicacion;
+	float multiplicacion;
 	int i;
 	i = numero - 1;
 	multiplicacion = numero;
 	for (; i > 1; i--)
 	{
 		multiplicacion = multiplicacion * i;
-		
+
 	}
 	return multiplicacion;
 }
-void PedirNumeros(float p[])
+/// @param p  se guarda el pedido al usuario
+float PedirNumeros(char mensaje[], float flotante)
 {
-	int i;
-	for (i = 0; i < 2; i++)
-	{
-		printf("ingrese numeros:");
-		scanf("%f", &p[i]);
-	}
-	
+
+	printf(mensaje);
+	scanf("%f", &flotante);
+	return flotante;
 }

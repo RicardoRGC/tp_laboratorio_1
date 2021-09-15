@@ -1,4 +1,3 @@
-
 /*
  * tp1bibliotecaP.h
  *
@@ -9,13 +8,12 @@
 #ifndef TP1BIBLIOTECAP_H_
 #define TP1BIBLIOTECAP_H_
 #include <string.h>
-int ValidarNumero(char[]);
-
-
-int Sumar1(float, int);
-int calcularResta(float, int);
-int calcularMultiplicacion(float, int);
-float calcularDiv(float, int);
-int calcularFactorial(float);
+int ValidarNumeroEntero(char numero[]);
+float PedirNumeros(char mensaje[], float flotante);
+float Sumar1(float, float);
+float calcularResta(float, float);
+float calcularMultiplicacion(float, float);
+float calcularDiv(float, float);
+float calcularFactorial(float);
 
 #endif /* TP1BIBLIOTECAP_H_ */
