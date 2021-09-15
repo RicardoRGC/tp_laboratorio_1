@@ -25,10 +25,8 @@ int main(void)
 
 	setbuf(stdout, NULL);
 	int opcion;
-
 	int sumaUno;
 	int restaUno;
-	int n;
 	float divisionUno;
 	int factorizacionUno;
 	int factorizacionDos;
@@ -38,7 +36,7 @@ int main(void)
 	int flagOperandoUno;
 	int flagOperandoDOS;
 	int flagCalculos;
-	char validacion[5];
+	//char validacion[5];
 
 	flagCalculos = 1;
 	flagOperandoUno = 1;
@@ -69,7 +67,7 @@ int main(void)
 		}
 		else
 		{
-			printf("2. ingresado B=%d\n", numeroDOS);
+			printf("2. ingresado B=%f\n", numeroDOS);
 		}
 
 		if (flagCalculos == 1)
@@ -101,12 +99,6 @@ int main(void)
 			printf("\n ingrese primer operando\n");
 			scanf("%f", &numeroUno);
 
-			//scanf("%s", validacion);
-			//n = ValidarNumero(validacion);
-
-			//} while (n == 0);
-			//numeroUno = atoi(validacion);
-
 			flagOperandoUno = 0;
 
 			break;
@@ -126,7 +118,7 @@ int main(void)
 			{
 
 				printf("\n ingrese segundo operando\n"); // validacion del segundo
-				scanf("%f", numeroDOS);
+				scanf("%f", &numeroDOS);
 
 				flagOperandoDOS = 0;
 
@@ -173,11 +165,10 @@ int main(void)
 				system("pause");
 			}
 			else
-
 			{
-				printf("El resultado de %f+%d es: %d\n"
-								"El resultado de %f-%d es: %d\n"
-								"El resultado de %f*%d es: %d\n", numeroUno, numeroDOS, sumaUno, numeroUno,
+				printf("El resultado de %f+%f es: %d\n"
+								"El resultado de %f-%f es: %d\n"
+								"El resultado de %f*%f es: %d\n", numeroUno, numeroDOS, sumaUno, numeroUno,
 								numeroDOS, restaUno, numeroUno, numeroDOS, multiplicacionUno);
 				if (divisionUno == 'N')
 				{
@@ -185,11 +176,12 @@ int main(void)
 				}
 				else
 				{
-					printf("El resultado de %f/%d es: %.2f\n", numeroUno, numeroDOS, divisionUno);
+					printf("El resultado de %f/%f es: %.2f\n", numeroUno, numeroDOS, divisionUno);
 				}
 
-				printf("El factorial de %f es: %d y El factorial de %d es: %d \n", numeroUno,
-								factorizacionUno, numeroDOS, factorizacionDos);
+				printf("El factorial de %f es: %d \n"
+								"y El factorial de %f es: %d \n", numeroUno, factorizacionUno, numeroDOS,
+								factorizacionDos);
 
 				system("pause");
 			}

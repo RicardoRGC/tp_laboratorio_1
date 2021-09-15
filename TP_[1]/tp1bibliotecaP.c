@@ -1,4 +1,3 @@
-
 /*
  * tp1blibliotecaP.c
  *
@@ -10,30 +9,29 @@
 #include <ctype.h>
 #include <string.h>
 #include "tp1bibliotecaP.h"
+/*
+ int ValidarNumero(char numero[])
+ {
+ int i;
+ for (i = 0; i < strlen(numero); i++)
+ {
+ if (!(isdigit(numero[i])))
+ {
+ printf("\n"
+ "--------------------------------------------------------------\n"
+ " por favor ingrese solo numeros\n");
 
-int ValidarNumero(char numero[])
-{
-	int i;
-	for (i = 0; i < strlen(numero); i++)
-	{
-		if (!(isdigit(numero[i])))
-		{
-			printf("\n"
-							"--------------------------------------------------------------\n"
-							" por favor ingrese solo numeros\n");
+ }
+ }
 
-			return numero;
-		}
-	}
-
-	return 1;
-}
-
+ return 1;
+ }
+ */
 int Sumar1(float numeroUno, int numeroDos) //sumar
 {
 	int suma;
 	suma = numeroUno + numeroDos;
-
+	
 	return suma;
 }
 int calcularResta(float numUNO, int numDOS)  // restar
@@ -73,7 +71,7 @@ int calcularFactorial(float numero)    // factorial
 	for (; i > 1; i--)
 	{
 		multiplicacion = multiplicacion * i;
-
+		
 	}
 	return multiplicacion;
 }
@@ -85,5 +83,5 @@ void PedirNumeros(float p[])
 		printf("ingrese numeros:");
 		scanf("%f", &p[i]);
 	}
-
+	
 }
