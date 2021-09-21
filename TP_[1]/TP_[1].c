@@ -88,10 +88,10 @@ int main(void)
 							"\n");
 
 			//scanf("%d", &opcion);
+
 			scanf("%s", validacion);
 			N = ValidarNumeroEntero(validacion);
-			//system("pause");
-			system("pause");
+
 		}
 		while (N == 0);
 		opcion = atoi(validacion);
@@ -181,10 +181,15 @@ int main(void)
 				{
 					printf("El resultado de %.2f/%.2f es: %.2f\n", numeroUno, numeroDOS, divisionUno);
 				}
-
-				printf("El factorial de %.2f es: %.2f \n"
-								"y El factorial de %.2f es: %.2f \n", numeroUno, factorizacionUno, numeroDOS,
-								factorizacionDos);
+				if (factorizacionUno == 0)
+				{
+					printf("no se puede factorizar");
+				}
+				else
+				{
+					printf("El factorial de %.2f es: %.2f \n", numeroUno, factorizacionUno);
+				}
+				printf("El factorial de %.2f es: %.2f \n", numeroDOS, factorizacionDos);
 
 				system("pause");
 			}
