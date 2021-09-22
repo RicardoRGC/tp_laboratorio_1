@@ -2,4 +2,11 @@
 <section name="Workbench">
 	<section name="ImportExportAction">
 	</section>
+	<section name="PreferencesImportWizard">
+		<item key="" value="C:\Users\riky\Desktop\tp1\tp_laboratorio_1\riky setting.epf"/>
+		<item key="" value="C:\Users\riky\Desktop\tp1\tp_laboratorio_1\riky setting.epf"/>
+		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\riky\Desktop\tp1\tp_laboratorio_1\riky setting.epf"/>
+		</list>
+	</section>
 </section>

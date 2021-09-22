@@ -488,3 +488,203 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c"
 gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
 Info: Nothing to build for TP_[1]
 Info: Nothing to build for TP_[1]
+08:19:20 **** Rebuild of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+Info: Nothing to build for TP_[1]
+08:26:44 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+08:26:49 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+Info: Nothing to build for TP_[1]
+08:37:58 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+..\tp1bibliotecaP.c:14:6: error: conflicting types for 'MostrarMenu'
+ void MostrarMenu(int flagCalculos, int flagOperandoUno,int flagOperandoDOS,float numeroUno,float numeroDOS)
+      ^~~~~~~~~~~
+In file included from ..\tp1bibliotecaP.c:11:0:
+..\tp1bibliotecaP.h:14:6: note: previous declaration of 'MostrarMenu' was here
+ void MostrarMenu(int flagcalculos, int flagoperandouno,int flagoperandodos,int numerouno,int numerodos);
+      ^~~~~~~~~~~
+08:39:15 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+08:39:20 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+09:15:25 **** Rebuild of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+In file included from ..\tp1bibliotecaP.c:11:0:
+..\tp1bibliotecaP.h:23:5: error: unknown type name 'numeroDOS'
+     numeroDOS,int flagCalculos)
+     ^~~~~~~~~
+..\tp1bibliotecaP.c:15:5: error: unknown type name 'numeroDOS'
+     numeroDOS,int flagCalculos)
+     ^~~~~~~~~
+09:15:46 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+..\tp1bibliotecaP.c: In function 'RealizacionDeCalculos':
+..\tp1bibliotecaP.c:15:5: error: unknown type name 'numeroDOS'
+     numeroDOS,int flagCalculos)
+     ^~~~~~~~~
+..\tp1bibliotecaP.c:28:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+..\tp1bibliotecaP.c:70:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+..\tp1bibliotecaP.c:97:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+..\tp1bibliotecaP.c:105:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+..\tp1bibliotecaP.c:112:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+..\tp1bibliotecaP.c:119:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+..\tp1bibliotecaP.c:132:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+..\tp1bibliotecaP.c:147:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+..\tp1bibliotecaP.c:172:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+In file included from ..\tp1bibliotecaP.c:11:0:
+..\tp1bibliotecaP.h:21:6: error: old-style parameter declarations in prototyped function definition
+ void RealizacionDeCalculos(float sumaUno, float restaUno, float multiplicacionUno,
+      ^~~~~~~~~~~~~~~~~~~~~
+..\tp1bibliotecaP.c:177:1: error: expected '{' at end of input
+ }
+ ^
+09:16:26 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+..\TP_[1].c: In function 'RealizacionDeCalculos':
+..\TP_[1].c:24:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+In file included from ..\TP_[1].c:21:0:
+..\tp1bibliotecaP.h:21:6: error: old-style parameter declarations in prototyped function definition
+ void RealizacionDeCalculos(float sumaUno, float restaUno, float multiplicacionUno,
+      ^~~~~~~~~~~~~~~~~~~~~
+..\TP_[1].c:185:1: error: expected '{' at end of input
+ }
+ ^
+09:17:21 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+..\TP_[1].c: In function 'RealizacionDeCalculos':
+..\TP_[1].c:24:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ {
+ ^
+In file included from ..\TP_[1].c:21:0:
+..\tp1bibliotecaP.h:21:6: error: old-style parameter declarations in prototyped function definition
+ void RealizacionDeCalculos(float sumaUno, float restaUno, float multiplicacionUno,
+      ^~~~~~~~~~~~~~~~~~~~~
+..\TP_[1].c:185:1: error: expected '{' at end of input
+ }
+ ^
+09:20:37 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+..\TP_[1].c: In function 'main':
+..\TP_[1].c:105:4: warning: 'sumaUno' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    RealizacionDeCalculos(sumaUno,  restaUno,  multiplicacionUno,
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          divisionUno,  factorizacionUno,  factorizacionDos,  numeroUno,
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         numeroDOS, flagCalculos);
+         ~~~~~~~~~~~~~~~~~~~~~~~~
+..\TP_[1].c:105:4: warning: 'restaUno' may be used uninitialized in this function [-Wmaybe-uninitialized]
+..\TP_[1].c:105:4: warning: 'multiplicacionUno' may be used uninitialized in this function [-Wmaybe-uninitialized]
+..\TP_[1].c:105:4: warning: 'divisionUno' may be used uninitialized in this function [-Wmaybe-uninitialized]
+..\TP_[1].c:105:4: warning: 'factorizacionUno' may be used uninitialized in this function [-Wmaybe-uninitialized]
+..\TP_[1].c:105:4: warning: 'factorizacionDos' may be used uninitialized in this function [-Wmaybe-uninitialized]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+Info: Nothing to build for TP_[1]
+Info: Nothing to build for TP_[1]
+Info: Nothing to build for TP_[1]
+09:23:56 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+09:24:01 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+Info: Nothing to build for TP_[1]
+Info: Nothing to build for TP_[1]
+Info: Nothing to build for TP_[1]
+Info: Nothing to build for TP_[1]
+09:43:20 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+..\tp1bibliotecaP.c:135:8: error: conflicting types for 'calcularFactorial'
+ double calcularFactorial(float numero)    // factorial
+        ^~~~~~~~~~~~~~~~~
+In file included from ..\tp1bibliotecaP.c:11:0:
+..\tp1bibliotecaP.h:56:7: note: previous declaration of 'calcularFactorial' was here
+ float calcularFactorial(float);
+       ^~~~~~~~~~~~~~~~~
+09:43:40 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+09:43:45 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+09:46:06 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+..\tp1bibliotecaP.c: In function 'ValidarNumeroEntero':
+..\tp1bibliotecaP.c:61:13: error: called object 'strlen' is not a function or function pointer
+  int strlen=strlen(numero);
+             ^~~~~~
+..\tp1bibliotecaP.c:61:6: note: declared here
+  int strlen=strlen(numero);
+      ^~~~~~
+09:46:22 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+..\tp1bibliotecaP.c: In function 'ValidarNumeroEntero':
+..\tp1bibliotecaP.c:65:16: warning: comparison between pointer and integer
+  for (i = 0; i < strlen; i++)
+                ^
+..\tp1bibliotecaP.c:61:6: warning: unused variable 'len' [-Wunused-variable]
+  int len =strlen(numero);
+      ^~~
+gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+09:46:39 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status

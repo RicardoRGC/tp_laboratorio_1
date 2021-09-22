@@ -8,6 +8,16 @@
 #ifndef TP1BIBLIOTECAP_H_
 #define TP1BIBLIOTECAP_H_
 #include <string.h>
+
+
+
+/// @param flagCalculos bandera que cambia el mensaje al usuario opcion 3 realizar calculos
+/// @param flagOperandoUno bandera que informa si el usuario ingreso el primer operando
+/// @param flagOperandoDOSbandera que informa si el usuario ingreso el primer operando
+/// @param numeroUno numero 1 flotante. al cambiar el estado de bandera muestra el valor ingresado
+/// @param numeroDOS numero 2 flotane .al cambiar el estado de bandera muestra el valor ingresado
+void MostrarMenu(int flagCalculos, int flagOperandoUno,int flagOperandoDOS,float numeroUno,float numeroDOS);
+
 /// @param flotante numero a validad si es decimal o entero
 /// @return retorna 0 si es decimal .
 int validarDecimal(float flotante);
@@ -43,6 +53,6 @@ float calcularDiv(float, float);
 
 /// @param numero a factorizar .
 /// @return retorna el resultado de la factorizacion.
-float calcularFactorial(float);
+double calcularFactorial(float);
 
 #endif /* TP1BIBLIOTECAP_H_ */

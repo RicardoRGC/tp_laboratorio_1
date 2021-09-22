@@ -10,6 +10,51 @@
 #include <string.h>
 #include "tp1bibliotecaP.h"
 
+
+
+void MostrarMenu(int flagCalculos, int flagOperandoUno, int flagOperandoDOS, float numeroUno,
+				float numeroDOS)
+{
+	if (flagOperandoUno == 1)
+	{
+		printf("\n"
+						"\n"
+						"\n1. Ingresar 1er operando A=x\n");
+
+	}
+	else
+	{
+		printf("\n"
+						"\n"
+						"\n"
+						"1. ingresado A=%.2f\n", numeroUno);
+
+	}
+	if (flagOperandoDOS == 1)
+	{
+		printf("2. Ingresar 2do operando B=x\n");
+	}
+	else
+	{
+		printf("2. ingresado B=%.2f\n", numeroDOS);
+	}
+
+	if (flagCalculos == 1)
+	{
+		printf("3. Calcular todas las operaciones  <-------------------------	\n");
+	}
+	else
+	{
+		printf("3. Calculos resueltos	\n");
+
+	}
+
+	printf("4. informar resultados \n");
+	printf("5. SALIR: "
+					"\n"
+					"\n");
+
+}
 int ValidarNumeroEntero(char numero[])
 {
 	int bandera = 1;
@@ -87,10 +132,10 @@ int validarDecimal(float flotante)
 	}
 	return N;
 }
-float calcularFactorial(float numero)    // factorial
+double calcularFactorial(float numero)    // factorial
 {
 	int n;
-	float multiplicacion;
+	double multiplicacion;
 	int i;
 	n = validarDecimal(numero);
 	if (n == 0)

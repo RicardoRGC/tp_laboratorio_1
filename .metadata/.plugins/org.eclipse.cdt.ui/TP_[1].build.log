@@ -1,1 +1,9 @@
-Info: Nothing to build for TP_[1]
+09:46:39 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+
+09:46:40 Build Failed. 1 errors, 0 warnings. (took 1s.194ms)
+

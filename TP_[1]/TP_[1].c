@@ -29,8 +29,8 @@ int main(void)
 	float sumaUno;
 	float restaUno;
 	float divisionUno;
-	float factorizacionUno;
-	float factorizacionDos;
+	double factorizacionUno;
+	double factorizacionDos;
 	float multiplicacionUno;
 	float numeroUno;
 	float numeroDOS;
@@ -48,46 +48,7 @@ int main(void)
 		do
 		{
 
-			if (flagOperandoUno == 1)
-			{
-				printf("\n"
-								"\n"
-								"\n1. Ingresar 1er operando A=x\n");
-
-			}
-			else
-			{
-				printf("\n"
-								"\n"
-								"\n"
-								"1. ingresado A=%.2f\n", numeroUno);
-
-			}
-			if (flagOperandoDOS == 1)
-			{
-				printf("2. Ingresar 2do operando B=x\n");
-			}
-			else
-			{
-				printf("2. ingresado B=%.2f\n", numeroDOS);
-			}
-
-			if (flagCalculos == 1)
-			{
-				printf("3. Calcular todas las operaciones	\n");
-			}
-			else
-			{
-				printf("3. Calculos resueltos	\n");
-
-			}
-
-			printf("4. informar resultados \n");
-			printf("5. SALIR: "
-							"\n"
-							"\n");
-
-			//scanf("%d", &opcion);
+			MostrarMenu(flagCalculos, flagOperandoUno, flagOperandoDOS, numeroUno, numeroDOS);
 
 			scanf("%s", validacion);
 			N = ValidarNumeroEntero(validacion);
@@ -183,13 +144,23 @@ int main(void)
 				}
 				if (factorizacionUno == 0)
 				{
-					printf("no se puede factorizar");
+					printf("A no se puede factorizar\n");
 				}
 				else
 				{
 					printf("El factorial de %.2f es: %.2f \n", numeroUno, factorizacionUno);
 				}
-				printf("El factorial de %.2f es: %.2f \n", numeroDOS, factorizacionDos);
+
+				if (factorizacionDos == 0)
+				{
+					printf("B no se puede factorizar\n");
+				}
+				else
+				{
+					printf("El factorial de %.2f es: %.2f \n", numeroDOS, factorizacionDos);
+				}
+
+				//printf("El factorial de %.2f es: %.2f \n", numeroDOS, factorizacionDos);
 
 				system("pause");
 			}
@@ -206,13 +177,13 @@ int main(void)
 							"no ingreso caracter Correcto\n"
 							"\n");
 			system("pause");
-			
+
 			break;
-			
+
 		}
-		
+
 	}
 	while (opcion != 5);
-	
+
 	return 0;
 }
