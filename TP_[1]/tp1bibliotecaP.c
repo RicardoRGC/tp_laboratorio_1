@@ -12,6 +12,7 @@
 
 
 
+
 void MostrarMenu(int flagCalculos, int flagOperandoUno, int flagOperandoDOS, float numeroUno,
 				float numeroDOS)
 {
@@ -58,10 +59,12 @@ void MostrarMenu(int flagCalculos, int flagOperandoUno, int flagOperandoDOS, flo
 int ValidarNumeroEntero(char numero[])
 {
 	int bandera = 1;
+	int N;
+	N=strlen(numero);
 
 	int i;
 
-	for (i = 0; i < strlen(numero); i++)
+	for (i = 0; i <N ; i++)
 	{
 		if (!(isdigit(numero[i]))) //5.55
 
@@ -71,7 +74,7 @@ int ValidarNumeroEntero(char numero[])
 
 			//	return 0;
 			bandera = 0;
-
+break;
 		}
 
 	}
