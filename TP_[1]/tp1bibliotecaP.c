@@ -10,9 +10,6 @@
 #include <string.h>
 #include "tp1bibliotecaP.h"
 
-
-
-
 void MostrarMenu(int flagCalculos, int flagOperandoUno, int flagOperandoDOS, float numeroUno,
 				float numeroDOS)
 {
@@ -60,11 +57,11 @@ int ValidarNumeroEntero(char numero[])
 {
 	int bandera = 1;
 	int N;
-	N=strlen(numero);
+	N = strlen(numero);
 
 	int i;
 
-	for (i = 0; i <N ; i++)
+	for (i = 0; i < N; i++)
 	{
 		if (!(isdigit(numero[i]))) //5.55
 
@@ -74,7 +71,7 @@ int ValidarNumeroEntero(char numero[])
 
 			//	return 0;
 			bandera = 0;
-break;
+			break;
 		}
 
 	}
@@ -141,20 +138,28 @@ double calcularFactorial(float numero)    // factorial
 	double multiplicacion;
 	int i;
 	n = validarDecimal(numero);
-	if (n == 0)
+	if (n == 0 || numero < 0)
 	{
 		multiplicacion = 0;
+
 	}
 	else
 	{
-
-		i = numero - 1;
-		multiplicacion = numero;
-		for (; i > 1; i--)
+		if (numero == 0)
 		{
-			multiplicacion = multiplicacion * i;
-
+			multiplicacion = 1;
 		}
+		else
+		{
+			i = numero - 1;
+			multiplicacion = numero;
+			for (; i > 1; i--)
+			{
+				multiplicacion = multiplicacion * i;
+
+			}
+		}
+
 	}
 
 	return multiplicacion;
