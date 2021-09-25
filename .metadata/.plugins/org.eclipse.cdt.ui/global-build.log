@@ -95,3 +95,64 @@ Info: Nothing to build for TP_[1]
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
 gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+07:57:09 **** Rebuild of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+08:12:27 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+Info: Nothing to build for TP_[1]
+08:14:20 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+08:14:24 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+08:26:38 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+..\TP_[1].c: In function 'main':
+..\TP_[1].c:35:8: warning: variable 'multiplicacionUno' set but not used [-Wunused-but-set-variable]
+  float multiplicacionUno;
+        ^~~~~~~~~~~~~~~~~
+..\TP_[1].c:34:9: warning: variable 'factorizacionDos' set but not used [-Wunused-but-set-variable]
+  double factorizacionDos;
+         ^~~~~~~~~~~~~~~~
+..\TP_[1].c:33:9: warning: variable 'factorizacionUno' set but not used [-Wunused-but-set-variable]
+  double factorizacionUno;
+         ^~~~~~~~~~~~~~~~
+..\TP_[1].c:32:8: warning: variable 'divisionUno' set but not used [-Wunused-but-set-variable]
+  float divisionUno;
+        ^~~~~~~~~~~
+..\TP_[1].c:31:8: warning: variable 'restaUno' set but not used [-Wunused-but-set-variable]
+  float restaUno;
+        ^~~~~~~~
+..\TP_[1].c:30:8: warning: variable 'sumaUno' set but not used [-Wunused-but-set-variable]
+  float sumaUno;
+        ^~~~~~~
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+08:27:36 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+Info: Nothing to build for TP_[1]
+08:36:57 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+08:37:03 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 

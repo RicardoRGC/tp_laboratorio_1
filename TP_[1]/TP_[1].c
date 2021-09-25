@@ -114,57 +114,11 @@ int main(void)
 			}
 			break;
 		case 4:
-			if (flagOperandoUno == 1 || flagOperandoDOS == 1)
-			{
-				printf("\n"
-								"por favor ingrese los operando para continuar\n"
-								"\n");
-				system("pause");
-			}
 
-			if (flagCalculos == 1)
-			{
-				printf("\n"
-								"por favor realizar calculos para continuar\n"
-								"\n");
-				system("pause");
-			}
-			else
-			{
-				printf("El resultado de %.2f+%.2f es: %.2f \n"
-								"El resultado de %.2f-%.2f es: %.2f \n"
-								"El resultado de %.2f*%.2f es: %.2f \n", numeroUno, numeroDOS, sumaUno, numeroUno,
-								numeroDOS, restaUno, numeroUno, numeroDOS, multiplicacionUno);
-				if (divisionUno == 'N')
-				{
-					printf("no se puede dividir por cero\n");
-				}
-				else
-				{
-					printf("El resultado de %.2f/%.2f es: %.2f\n", numeroUno, numeroDOS, divisionUno);
-				}
-				if (factorizacionUno == 0)
-				{
-					printf("A no se puede factorizar\n");
-				}
-				else
-				{
-					printf("El factorial de %.2f es: %.2f \n", numeroUno, factorizacionUno);
-				}
-
-				if (factorizacionDos == 0)
-				{
-					printf("B no se puede factorizar\n");
-				}
-				else
-				{
-					printf("El factorial de %.2f es: %.2f \n", numeroDOS, factorizacionDos);
-				}
-
-				//printf("El factorial de %.2f es: %.2f \n", numeroDOS, factorizacionDos);
-
-				system("pause");
-			}
+		 MostrarMensaje( flagCalculos,  flagOperandoUno,  flagOperandoDOS,
+					 numeroUno,  numeroDOS,  divisionUno,  sumaUno,
+					 multiplicacionUno,  restaUno,  factorizacionUno,
+					 factorizacionDos);
 
 			break;
 		case 5:

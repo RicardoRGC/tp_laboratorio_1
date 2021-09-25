@@ -34,6 +34,10 @@ float calcularMultiplicacion(float numUNO, float numDOS)   // multiplicar
 {
 	float resultadoMultip;
 	resultadoMultip = numUNO * numDOS;
+	if(resultadoMultip==-0)
+	{
+		resultadoMultip=0;
+	}
 	return resultadoMultip;
 }
 
@@ -43,6 +47,10 @@ float calcularDiv(float numUNO, float numDOS)    // dividir
 	if (numDOS != 0)
 	{
 		division = numUNO / numDOS;
+		if(division==-0)
+		{
+			division=0;
+		}
 	}
 	else
 	{
