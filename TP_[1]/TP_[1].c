@@ -19,6 +19,7 @@
 #include <ctype.h>
 #include <string.h>
 #include "tp1bibliotecaP.h"
+#include "FMatematicas.h"
 
 int main(void)
 {

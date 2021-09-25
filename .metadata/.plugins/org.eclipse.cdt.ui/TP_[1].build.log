@@ -1,6 +1,7 @@
-00:00:09 **** Incremental Build of configuration Debug for project TP_[1] ****
+07:50:00 **** Incremental Build of configuration Debug for project TP_[1] ****
 Info: Internal Builder is used for build
-gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
 
-00:00:10 Build Finished. 0 errors, 0 warnings. (took 739ms)
+07:50:02 Build Finished. 0 errors, 0 warnings. (took 1s.448ms)
 

@@ -23,7 +23,7 @@ void MostrarMenu(int flagCalculos, int flagOperandoUno,int flagOperandoDOS,float
 int validarDecimal(float flotante);
 
 /// @param numero se ingresa una cadena numerica y verifica q sea un numero entero
-/// @return retorna 0 si el numero no es entero
+/// @return retorna 0 si el numero no es entero 1 si lo es.
 int ValidarNumeroEntero(char numero[]);
 
 /// @param mensaje mensaje al usuario para q ingrese un numero flotante
@@ -31,28 +31,6 @@ int ValidarNumeroEntero(char numero[]);
 /// @returnretarna el numero ingresado
 float PedirNumeros(char mensaje[], float flotante);
 
-/// @param numeroUno primer numero a sumar
-/// @param numeroDos segundo numero a sumar;
-/// @return retorna la suma de numeroUno y NumeroDos
-float Sumar1(float, float);
 
-/// @param numUNO se va a restar por numDOS.
-/// @param numDOS numero para restar
-/// @return retorna la resta de numUNO menos numDOS
-float calcularResta(float, float);
-
-/// @param numUNO numeros a multiplicar
-/// @param numDOS numeros a multiplicar
-/// @return retorna resultado de multiplicacion de numUNO y numDOS
-float calcularMultiplicacion(float, float);
-
-/// @param numUNO numero al q se lo va dividir por numDOS
-/// @param numDOS numero divisor
-/// @return reorna la division de numUNO en numDOS
-float calcularDiv(float, float);
-
-/// @param numero a factorizar .
-/// @return retorna el resultado de la factorizacion.
-double calcularFactorial(float);
 
 #endif /* TP1BIBLIOTECAP_H_ */

@@ -9,6 +9,7 @@
 #include <ctype.h>
 #include <string.h>
 #include "tp1bibliotecaP.h"
+#include "FMatematicas.h"
 
 void MostrarMenu(int flagCalculos, int flagOperandoUno, int flagOperandoDOS, float numeroUno,
 				float numeroDOS)
@@ -53,70 +54,43 @@ void MostrarMenu(int flagCalculos, int flagOperandoUno, int flagOperandoDOS, flo
 					"\n");
 
 }
-int ValidarNumeroEntero(char numero[])
-{
+int ValidarNumeroEntero(char numero[]) {
 	int bandera = 1;
-	int N;
-	N = strlen(numero);
-
+	int auxstr;
+	auxstr = strlen(numero);
 	int i;
 
-	for (i = 0; i < N; i++)
-	{
-		if (!(isdigit(numero[i]))) //5.55
+	if ((numero[0] == '-' && auxstr!=1 )|| isdigit(numero[0])) {
 
+		for (i = 1; i < auxstr; i++)
 		{
 
-			printf("error ingrese numero entero\n");
+			if (!(isdigit(numero[i])))
 
-			//	return 0;
-			bandera = 0;
-			break;
+			{
+
+				printf("error ingrese numero entero\n");
+				system("pause");
+
+				bandera = 0;
+				break;
+
+			}
+
 		}
 
+	}
+	else
+	{
+		printf("error ingrese numero entero\n");
+		system("pause");
+		bandera = 0;
 	}
 
 	return bandera;
 }
 
-/// @param numeroUno primer numero a sumar
-/// @param numeroDos segundo numero a sumar;
-/// @return retorna la suma de numeroUno y NumeroDos
-float Sumar1(float numeroUno, float numeroDos) //sumar
-{
-	float suma;
-	suma = numeroUno + numeroDos;
 
-	return suma;
-}
-
-float calcularResta(float numUNO, float numDOS)  // restar
-{
-	float resultadoResta;
-	resultadoResta = numUNO - numDOS;
-	return resultadoResta;
-}
-
-float calcularMultiplicacion(float numUNO, float numDOS)   // multiplicar
-{
-	float resultadoMultip;
-	resultadoMultip = numUNO * numDOS;
-	return resultadoMultip;
-}
-
-float calcularDiv(float numUNO, float numDOS)    // dividir
-{
-	float division;
-	if (numDOS != 0)
-	{
-		division = numUNO / numDOS;
-	}
-	else
-	{
-		division = 'N';
-	}
-	return division;
-}
 int validarDecimal(float flotante)
 {
 	int ent = flotante;
@@ -131,38 +105,6 @@ int validarDecimal(float flotante)
 		N = 1;
 	}
 	return N;
-}
-double calcularFactorial(float numero)    // factorial
-{
-	int n;
-	double multiplicacion;
-	int i;
-	n = validarDecimal(numero);
-	if (n == 0 || numero < 0)
-	{
-		multiplicacion = 0;
-
-	}
-	else
-	{
-		if (numero == 0)
-		{
-			multiplicacion = 1;
-		}
-		else
-		{
-			i = numero - 1;
-			multiplicacion = numero;
-			for (; i > 1; i--)
-			{
-				multiplicacion = multiplicacion * i;
-
-			}
-		}
-
-	}
-
-	return multiplicacion;
 }
 
 float PedirNumeros(char mensaje[], float flotante)

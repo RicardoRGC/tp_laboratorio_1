@@ -48,3 +48,50 @@ collect2.exe: error: ld returned 1 exit status
 00:00:09 **** Incremental Build of configuration Debug for project TP_[1] ****
 Info: Internal Builder is used for build
 gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
+07:28:43 **** Rebuild of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+07:31:17 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+07:31:55 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+07:44:28 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+..\tp1bibliotecaP.c: In function 'ValidarNumeroEntero':
+..\tp1bibliotecaP.c:63:22: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  if (numero[0] == '-'&& auxstr!=1 || isdigit(numero[0])) {
+      ~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+07:45:04 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+07:45:14 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+07:46:24 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+Info: Nothing to build for TP_[1]
+Info: Nothing to build for TP_[1]
+07:50:00 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
+gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
