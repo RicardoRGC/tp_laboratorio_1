@@ -1,158 +1,71 @@
-18:07:36 **** Incremental Build of configuration Debug for project TP_[1] ****
+11:37:22 **** Rebuild of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
-Info: Nothing to build for TP_[1]
-18:30:13 **** Incremental Build of configuration Debug for project TP_[1] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o B.o "..\\B.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o BValidaciones.o "..\\BValidaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[2].o "..\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
+gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
+Info: Nothing to build for TP_[2]
+11:40:33 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[2].o "..\\TP_[2].c" 
+..\TP_[2].c: In function 'main':
+..\TP_[2].c:42:11: error: redeclaration of 'list' with no linkage
+  Employee list[TamArray] =
+           ^~~~
+..\TP_[2].c:36:11: note: previous declaration of 'list' was here
+  Employee list[TamArray] ;
+           ^~~~
+11:42:49 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[2].o "..\\TP_[2].c" 
+gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-18:30:21 **** Incremental Build of configuration Debug for project TP_[1] ****
+11:44:09 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
-Info: Nothing to build for TP_[1]
-Info: Nothing to build for TP_[1]
-Info: Nothing to build for TP_[1]
-Info: Nothing to build for TP_[1]
-23:42:31 **** Incremental Build of configuration Debug for project TP_[1] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
+gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
+11:45:39 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
-Info: Nothing to build for TP_[1]
-23:43:40 **** Incremental Build of configuration Debug for project TP_[1] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
+gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
+11:45:57 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
-23:51:04 **** Incremental Build of configuration Debug for project TP_[1] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
+gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
+11:46:11 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
-23:53:36 **** Incremental Build of configuration Debug for project TP_[1] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
+gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
+11:46:37 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
-23:55:34 **** Incremental Build of configuration Debug for project TP_[1] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
+gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
+11:46:57 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
-Info: Nothing to build for TP_[1]
-Info: Nothing to build for TP_[1]
-00:00:04 **** Incremental Build of configuration Debug for project TP_[1] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
+gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
+11:48:05 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[2].o "..\\TP_[2].c" 
+gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-00:00:09 **** Incremental Build of configuration Debug for project TP_[1] ****
+11:48:08 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -o TP_[1].exe TP_[1].o tp1bibliotecaP.o 
-07:28:43 **** Rebuild of configuration Debug for project TP_[1] ****
+gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
+11:50:50 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-07:31:17 **** Incremental Build of configuration Debug for project TP_[1] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
+gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
+11:52:25 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-07:31:55 **** Incremental Build of configuration Debug for project TP_[1] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-07:44:28 **** Incremental Build of configuration Debug for project TP_[1] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-..\tp1bibliotecaP.c: In function 'ValidarNumeroEntero':
-..\tp1bibliotecaP.c:63:22: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
-  if (numero[0] == '-'&& auxstr!=1 || isdigit(numero[0])) {
-      ~~~~~~~~~~~~~~~~^~~~~~~~~~~~
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
+gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-07:45:04 **** Incremental Build of configuration Debug for project TP_[1] ****
+11:52:32 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-07:45:14 **** Incremental Build of configuration Debug for project TP_[1] ****
-Info: Internal Builder is used for build
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-07:46:24 **** Incremental Build of configuration Debug for project TP_[1] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-Info: Nothing to build for TP_[1]
-Info: Nothing to build for TP_[1]
-07:50:00 **** Incremental Build of configuration Debug for project TP_[1] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-07:57:09 **** Rebuild of configuration Debug for project TP_[1] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-08:12:27 **** Incremental Build of configuration Debug for project TP_[1] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-Info: Nothing to build for TP_[1]
-08:14:20 **** Incremental Build of configuration Debug for project TP_[1] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-08:14:24 **** Incremental Build of configuration Debug for project TP_[1] ****
-Info: Internal Builder is used for build
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-08:26:38 **** Incremental Build of configuration Debug for project TP_[1] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
-..\TP_[1].c: In function 'main':
-..\TP_[1].c:35:8: warning: variable 'multiplicacionUno' set but not used [-Wunused-but-set-variable]
-  float multiplicacionUno;
-        ^~~~~~~~~~~~~~~~~
-..\TP_[1].c:34:9: warning: variable 'factorizacionDos' set but not used [-Wunused-but-set-variable]
-  double factorizacionDos;
-         ^~~~~~~~~~~~~~~~
-..\TP_[1].c:33:9: warning: variable 'factorizacionUno' set but not used [-Wunused-but-set-variable]
-  double factorizacionUno;
-         ^~~~~~~~~~~~~~~~
-..\TP_[1].c:32:8: warning: variable 'divisionUno' set but not used [-Wunused-but-set-variable]
-  float divisionUno;
-        ^~~~~~~~~~~
-..\TP_[1].c:31:8: warning: variable 'restaUno' set but not used [-Wunused-but-set-variable]
-  float restaUno;
-        ^~~~~~~~
-..\TP_[1].c:30:8: warning: variable 'sumaUno' set but not used [-Wunused-but-set-variable]
-  float sumaUno;
-        ^~~~~~~
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-08:27:36 **** Incremental Build of configuration Debug for project TP_[1] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-Info: Nothing to build for TP_[1]
-08:36:57 **** Incremental Build of configuration Debug for project TP_[1] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[1].o "..\\TP_[1].c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o tp1bibliotecaP.o "..\\tp1bibliotecaP.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FMatematicas.o "..\\FMatematicas.c" 
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[1].exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-08:37:03 **** Incremental Build of configuration Debug for project TP_[1] ****
-Info: Internal Builder is used for build
-gcc -o TP_[1].exe FMatematicas.o TP_[1].o tp1bibliotecaP.o 
+gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 

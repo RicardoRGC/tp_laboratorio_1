@@ -17,6 +17,8 @@ typedef struct
 	int sector;
 	int isEmpty;
 } Employee;
+int verificarLista(Employee* list, int len );
+int mostrarMenu(Employee* list);
 /// @param list lista a calcular promedios. se encarga de calcular el sueldo mayor al promedio
 /// @param len tamaño de la lista
 /// @return
@@ -46,7 +48,7 @@ int findEmployeeById(Employee* list, int len, int id);
 /// @param contadorId contador progresivo de id Usuario
 /// @param limitCarac  limite de carracter para cadenas.
 /// @return retorna -1 si hay error
-int CargarEmpleado(Employee lista[], int TArray, int contadorId, int limitCarac);
+int CargarEmpleado(Employee lista[], int TArray, int* contadorId, int limitCarac);
 
 /// @param lista ingresa la estructura y busca un espacio libre
 /// @param tam tamaño de la lista
