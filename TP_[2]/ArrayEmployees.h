@@ -17,7 +17,12 @@ typedef struct
 	int sector;
 	int isEmpty;
 } Employee;
+/// @param list verifica q la lista esta cargada
+/// @param len tamaño de la lista
+/// @return retorna -1 si esta vacia 0 con alguna carga.
 int verificarLista(Employee* list, int len );
+/// @param list la estructura q va interacturar con el menu.
+/// @return retorna -1 si hay error
 int mostrarMenu(Employee* list);
 /// @param list lista a calcular promedios. se encarga de calcular el sueldo mayor al promedio
 /// @param len tamaño de la lista

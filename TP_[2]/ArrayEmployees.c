@@ -209,7 +209,7 @@ int initEmployees(Employee* list, int len)
 	{
 		for (int i = 0; i < len; i++)
 		{
-			/*list[i].isEmpty = VACIO;
+			/*list[i].isEmpty = VACIO;// modificacion para harcodeo manual.
 							retorno = 0;*/
 			if (list[i].id > 0)
 			{
