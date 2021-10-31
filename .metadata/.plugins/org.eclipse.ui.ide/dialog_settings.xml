@@ -6,6 +6,12 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\gonza\Desktop\PARCIAL1\PARCIAL1\PARCIAL\src"/>
+			<item value="C:\Users\gonza\Downloads\TP3_Laboratorio1-master (1)\TP3_Laboratorio1-master\Win_64"/>
+			<item value="C:\Users\gonza\Downloads\TP3_Laboratorio1-master\TP3_Laboratorio1-master\Win_64"/>
+			<item value="C:\Users\gonza\Downloads\TP3 (1)\eclipse_tp3_v3\eclipse_tp3_v3\tp3_windows"/>
+			<item value="C:\Users\gonza\Desktop\TP3\tp_laboratorio_1\TP_[3]"/>
+			<item value="C:\Users\gonza\Desktop\TP3\tp_laboratorio_1\TP_[2]"/>
 			<item value="C:\Users\riky\Desktop\tp1\tp_laboratorio_1\TP_[1]"/>
 		</list>
 	</section>
@@ -16,6 +22,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\gonza\Downloads\TP3 (1)\eclipse_tp3_v3\eclipse_tp3_v3\TP_[3]"/>
+			<item value="C:\Users\gonza\Desktop\TP3\tp_laboratorio_1\TP_[3]\tp3_windows"/>
+			<item value="C:\Users\gonza\Downloads\TP3 (1)\eclipse_tp3_v3\eclipse_tp3_v3\tp3_windows"/>
 			<item value="C:\Users\riky\Desktop\tp1\tp_laboratorio_1\TP_[2]"/>
 			<item value="C:\Users\riky\Desktop\tp1\tp_laboratorio_1"/>
 		</list>

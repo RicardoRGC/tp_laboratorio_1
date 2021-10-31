@@ -1,81 +1,340 @@
-11:37:22 **** Rebuild of configuration Debug for project TP_[2] ****
+09:32:41 **** Rebuild of configuration Debug for project pruebaTp3 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o B.o "..\\B.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+10:06:03 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o BValidaciones.o "..\\BValidaciones.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[2].o "..\\TP_[2].c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-Info: Nothing to build for TP_[2]
-11:40:33 **** Incremental Build of configuration Debug for project TP_[2] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[2].o "..\\TP_[2].c" 
-..\TP_[2].c: In function 'main':
-..\TP_[2].c:42:11: error: redeclaration of 'list' with no linkage
-  Employee list[TamArray] =
-           ^~~~
-..\TP_[2].c:36:11: note: previous declaration of 'list' was here
-  Employee list[TamArray] ;
-           ^~~~
-11:42:49 **** Incremental Build of configuration Debug for project TP_[2] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[2].o "..\\TP_[2].c" 
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o B.o "..\\B.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-11:44:09 **** Incremental Build of configuration Debug for project TP_[2] ****
+10:06:12 **** Incremental Build of configuration Debug for project pruebaTp3 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-11:45:39 **** Incremental Build of configuration Debug for project TP_[2] ****
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+10:13:22 **** Incremental Build of configuration Debug for project pruebaTp3 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-11:45:57 **** Incremental Build of configuration Debug for project TP_[2] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:30:19: error: invalid type argument of unary '*' (have 'int')
+      if(getNumero(*option, "1.\n "
+                   ^~~~~~~
+10:13:38 **** Incremental Build of configuration Debug for project pruebaTp3 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-11:46:11 **** Incremental Build of configuration Debug for project TP_[2] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:30:19: warning: passing argument 1 of 'getNumero' makes pointer from integer without a cast [-Wint-conversion]
+      if(getNumero(option, "1.\n "
+                   ^~~~~~
+In file included from ..\main.c:6:0:
+..\B.h:63:5: note: expected 'int *' but argument is of type 'int'
+ int getNumero(int* eResultado, char* mensaje, char* mensajeError, int minimo, int maximo,
+     ^~~~~~~~~
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+10:13:46 **** Incremental Build of configuration Debug for project pruebaTp3 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-11:46:37 **** Incremental Build of configuration Debug for project TP_[2] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
+10:17:37 **** Incremental Build of configuration Debug for project pruebaTp3 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-11:46:57 **** Incremental Build of configuration Debug for project TP_[2] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+10:18:06 **** Incremental Build of configuration Debug for project pruebaTp3 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-11:48:05 **** Incremental Build of configuration Debug for project TP_[2] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+10:41:55 **** Incremental Build of configuration Debug for project pruebaTp3 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[2].o "..\\TP_[2].c" 
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:49:13: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+             getNumero(&id, "ingrese nombre", "Error", 1, 1000, )
+             ^~~~~~~~~
+..\Controller.c:49:64: error: expected expression before ')' token
+             getNumero(&id, "ingrese nombre", "Error", 1, 1000, )
+                                                                ^
+..\Controller.c:57:26: error: 'horasTeabajadas' undeclared (first use in this function)
+             scanf("%d", &horasTeabajadas);
+                          ^~~~~~~~~~~~~~~
+..\Controller.c:57:26: note: each undeclared identifier is reported only once for each function it appears in
+..\Controller.c:70:16: error: 'ret' undeclared (first use in this function)
+         return ret;
+                ^~~
+..\Controller.c:45:10: warning: unused variable 'horasTrabajadas' [-Wunused-variable]
+      int horasTrabajadas;
+          ^~~~~~~~~~~~~~~
+10:42:25 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c: In function 'employee_new':
+..\Employee.c:11:5: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+     strcpy(empleado->nombre, "");
+     ^~~~~~
+..\Employee.c:11:5: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\Employee.c:11:5: note: include '<string.h>' or provide a declaration of 'strcpy'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:49:13: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+             getNumero(&id, "ingrese nombre", "Error", 1, 1000,REINTENTOS);
+             ^~~~~~~~~
+..\Controller.c:57:26: error: 'horasTeabajadas' undeclared (first use in this function)
+             scanf("%d", &horasTeabajadas);
+                          ^~~~~~~~~~~~~~~
+..\Controller.c:57:26: note: each undeclared identifier is reported only once for each function it appears in
+..\Controller.c:70:16: error: 'ret' undeclared (first use in this function)
+         return ret;
+                ^~~
+..\Controller.c:45:10: warning: unused variable 'horasTrabajadas' [-Wunused-variable]
+      int horasTrabajadas;
+          ^~~~~~~~~~~~~~~
+10:42:59 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:49:13: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+             getNumero(&id, "ingrese nombre", "Error", 1, 1000,REINTENTOS);
+             ^~~~~~~~~
+..\Controller.c:70:16: error: 'ret' undeclared (first use in this function)
+         return ret;
+                ^~~
+..\Controller.c:70:16: note: each undeclared identifier is reported only once for each function it appears in
+10:43:18 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:49:13: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+             getNumero(&id, "ingrese nombre", "Error", 1, 1000,REINTENTOS);
+             ^~~~~~~~~
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-11:48:08 **** Incremental Build of configuration Debug for project TP_[2] ****
+10:43:40 **** Incremental Build of configuration Debug for project pruebaTp3 ****
 Info: Internal Builder is used for build
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-11:50:50 **** Incremental Build of configuration Debug for project TP_[2] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-11:52:25 **** Incremental Build of configuration Debug for project TP_[2] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:49:13: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+             getNumero(id, "ingrese nombre", "Error", 1, 1000,REINTENTOS);
+             ^~~~~~~~~
+..\Controller.c:49:13: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+             getNumero(id, "ingrese nombre", "Error", 1, 1000,REINTENTOS);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-11:52:32 **** Incremental Build of configuration Debug for project TP_[2] ****
+10:43:51 **** Incremental Build of configuration Debug for project pruebaTp3 ****
 Info: Internal Builder is used for build
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-17:37:13 **** Incremental Build of configuration Debug for project TP_[2] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:49:13: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+             getNumero(*id, "ingrese nombre", "Error", 1, 1000,REINTENTOS);
+             ^~~~~~~~~
+..\Controller.c:49:23: error: invalid type argument of unary '*' (have 'int')
+             getNumero(*id, "ingrese nombre", "Error", 1, 1000,REINTENTOS);
+                       ^~~
+10:44:08 **** Incremental Build of configuration Debug for project pruebaTp3 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o TP_[2].o "..\\TP_[2].c" 
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-23:12:17 **** Incremental Build of configuration Debug for project TP_[2] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:49:13: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+             getNumero(&id, "ingrese nombre", "Error", 1, 1000,REINTENTOS);
+             ^~~~~~~~~
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:44:43 **** Incremental Build of configuration Debug for project pruebaTp3 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o ArrayEmployees.o "..\\ArrayEmployees.c" 
-gcc -o TP_[2].exe ArrayEmployees.o B.o BValidaciones.o TP_[2].o 
-Info: Nothing to build for TP_[2]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:53:36 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c: In function 'employee_new':
+..\Employee.c:11:5: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+     strcpy(empleado->nombre, "");
+     ^~~~~~
+..\Employee.c:11:5: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\Employee.c:11:5: note: include '<string.h>' or provide a declaration of 'strcpy'
+..\Employee.c: In function 'employee_setNombre':
+..\Employee.c:37:9: warning: incompatible implicit declaration of built-in function 'strcpy'
+         strcpy(this->nombre,nombre);
+         ^~~~~~
+..\Employee.c:37:9: note: include '<string.h>' or provide a declaration of 'strcpy'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:49:13: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+             getNumero(&id, "ingrese id", "Error", 1, 1000,REINTENTOS);
+             ^~~~~~~~~
+..\Controller.c:52:13: warning: implicit declaration of function 'getString' [-Wimplicit-function-declaration]
+             getString(nombre, 30, "ingrese nombre", "Error", REINTENTOS);
+             ^~~~~~~~~
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:54:16 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:49:13: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+             getNumero(&id,"ingrese id", "Error", 1, 1000,REINTENTOS);
+             ^~~~~~~~~
+..\Controller.c:52:13: warning: implicit declaration of function 'getString' [-Wimplicit-function-declaration]
+             getString(&nombre, 30, "ingrese nombre", "Error", REINTENTOS);
+             ^~~~~~~~~
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:54:52 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:49:13: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+             getNumero(&id,"ingrese id", "Error", 1, 1000,REINTENTOS);
+             ^~~~~~~~~
+..\Controller.c:52:13: warning: implicit declaration of function 'getString' [-Wimplicit-function-declaration]
+             getString(nombre[30], 30, "ingrese nombre", "Error", REINTENTOS);
+             ^~~~~~~~~
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:57:13 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:57:24 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:49:13: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+             getNumero(&id,"ingrese id", "Error", 1, 1000,REINTENTOS);
+             ^~~~~~~~~
+..\Controller.c:52:13: warning: implicit declaration of function 'getString' [-Wimplicit-function-declaration]
+             getString(nombre[30], 30, "ingrese nombre", "Error", REINTENTOS);
+             ^~~~~~~~~
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:58:47 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:50:13: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+             getNumero(&id,"ingrese id", "Error", 1, 1000,REINTENTOS);
+             ^~~~~~~~~
+..\Controller.c:53:13: warning: implicit declaration of function 'getString' [-Wimplicit-function-declaration]
+             getString(nombre[30], 30, "ingrese nombre", "Error", REINTENTOS);
+             ^~~~~~~~~
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:59:15 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:51:13: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+             getNumero(&id,"ingrese id", "Error", 1, 1000,REINTENTOS);
+             ^~~~~~~~~
+..\Controller.c:54:13: warning: implicit declaration of function 'getString' [-Wimplicit-function-declaration]
+             getString(nombre[30], 30, "ingrese nombre", "Error", REINTENTOS);
+             ^~~~~~~~~
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:00:03 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:51:7: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+       getNumero(&id, "ingrese horas trabajadas", "Error", 1, 1000,REINTENTOS);
+       ^~~~~~~~~
+..\Controller.c:55:13: warning: implicit declaration of function 'getString' [-Wimplicit-function-declaration]
+             getString(nombre[30], 30, "ingrese nombre", "Error", REINTENTOS);
+             ^~~~~~~~~
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:01:00 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:53:9: warning: implicit declaration of function 'getNumero' [-Wimplicit-function-declaration]
+         getNumero(&id, "ingrese horas trabajadas", "Error", 1, 1000,3);
+         ^~~~~~~~~
+..\Controller.c:56:13: warning: implicit declaration of function 'getString' [-Wimplicit-function-declaration]
+             getString(nombre[30], 30, "ingrese nombre", "Error", REINTENTOS);
+             ^~~~~~~~~
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:01:57 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:58:23: warning: passing argument 1 of 'getString' makes pointer from integer without a cast [-Wint-conversion]
+             getString(nombre[30], 30, "ingrese nombre", "Error", REINTENTOS);
+                       ^~~~~~
+In file included from ..\Controller.c:7:0:
+..\B.h:49:5: note: expected 'char *' but argument is of type 'char'
+ int getString(char* eResultado, int tamCadena, char* mensaje, char* mensajeError, int reintentos);
+     ^~~~~~~~~
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:02:05 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:07:17 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:61:13: error: lvalue required as left operand of assignment
+      && rtn = employee_setSueldo(empleado, sueldo) !=-1)
+             ^
+11:08:11 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:08:37 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file pruebaTp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:32:35 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+11:33:50 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for pruebaTp3
+11:39:40 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+11:40:42 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+11:46:46 **** Incremental Build of configuration Debug for project pruebaTp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\gonza\\Downloads\\TP3 (1)\\eclipse_tp3_v3\\eclipse_tp3_v3\\TP_[3]" -o pruebaTp3.exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
