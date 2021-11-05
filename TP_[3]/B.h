@@ -7,7 +7,8 @@
 
 #ifndef B_H_
 #define B_H_
-
+int getStringNombreApellido(char* eResultado, int tam, char* mensaje, char* mensajeError, int reintentos);
+int getStringInt(char* eResultado, int tam, char* mensaje, char* mensajeError, int reintentos);
 /// @param eResultado
 /// @param tam
 /// @param mensaje

@@ -185,6 +185,66 @@ int getString(char* eResultado, int tam, char* mensaje, char* mensajeError, int 
 
 	return retorno;
 }
+int getStringNombreApellido(char* eResultado, int tam, char* mensaje, char* mensajeError, int reintentos)
+{
+ char bufferChar[50];
+	int retorno = -1;
+
+	if (mensaje != NULL && mensajeError != NULL && eResultado != NULL)
+	{
+		do
+		{
+			printf(mensaje);
+			fflush(stdin);
+
+			if (myGets(bufferChar, 50) == 0 && validarCadenaEspacios(bufferChar))
+			{
+				strncpy(eResultado, bufferChar, tam);
+				retorno = 0;
+				break;
+			}
+			else
+			{
+				printf(mensajeError);
+
+			}
+			reintentos--;
+		}
+		while (reintentos > 0);
+	}
+
+	return retorno;
+}
+int getStringInt(char* eResultado, int tam, char* mensaje, char* mensajeError, int reintentos)
+{
+ char bufferChar[50];
+	int retorno = -1;
+
+	if (mensaje != NULL && mensajeError != NULL && eResultado != NULL)
+	{
+		do
+		{
+			printf(mensaje);
+			fflush(stdin);
+
+			if (myGets(bufferChar, 50) == 0 && validarCadenaNumerica(bufferChar))
+			{
+				strncpy(eResultado, bufferChar, tam);
+				retorno = 0;
+				break;
+			}
+			else
+			{
+				printf(mensajeError);
+
+			}
+			reintentos--;
+		}
+		while (reintentos > 0);
+	}
+
+	return retorno;
+}
 
  
 int getNumeroFlotante(float* eResultado, char* mensaje, char* mensajeError, int minimo, int maximo,

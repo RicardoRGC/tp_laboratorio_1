@@ -1,75 +1,112 @@
-
 #include "Employee.h"
+#include "BValidaciones.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <limits.h>
 
-Employee* employee_new()
+ void mostrarUnEmpleado(Employee* this)
 {
-    Employee* empleado;
-    empleado = (Employee*)malloc(sizeof(Employee));
-    empleado->id = 0;
-    strcpy(empleado->nombre, "");
-    empleado->horasTrabajadas = 0;
-    empleado->sueldo = 0;
-
-    return empleado;
+   if(this != NULL )
+   {
+       printf ( "%d  %s  %d  %d \n" , this->id , this->nombre , this->horasTrabajadas , this->sueldo);
+   }
 }
 
-int employee_setId(Employee* this,int id)
+Employee* employee_newParametros(char* idStr, char* nombreStr, char* horasTrabajadasStr,
+				char* sueldo)
 {
-	 int rtn=-1;
+	Employee*empleado = employee_new();
 
+	employee_setId(empleado, atoi(idStr));
+					employee_setNombre(empleado, nombreStr);
+					employee_setHorasTrabajadas(empleado, atoi(horasTrabajadasStr));
+					employee_setSueldo(empleado, atoi(sueldo));
 
-	    if( id > 0 && this != NULL)
-	    {
-	        this->id = id;
-	        rtn=0;
-	    }
+					/*
+					 empleado->id=atoi(idStr);
+					 strcpy(empleado->nombre,nombreStr);
+					 empleado->horasTrabajadas=atoi(horasTrabajadasStr);
+					 empleado->sueldo=atoi(sueldo);
+					 */
 
-	    return rtn;
-}
-int employee_setNombre(Employee* this,char* nombre)
-{
-	 int rtn=-1;
+					return empleado;
+				}
 
-	    if( nombre > 0 && this != NULL)
-	    {
-	       strcpy(this->nombre,nombre);
-	        rtn=0;
-	    }
+				Employee* employee_new()
+				{
+					Employee*empleado;
+					empleado = (Employee*) malloc(sizeof(Employee));
+					empleado->id = 0;
+					strcpy(empleado->nombre, "");
+					empleado->horasTrabajadas = 0;
+					empleado->sueldo = 0;
 
-	    return rtn;
+					return empleado;
+				}
 
-}
-int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas)
-{
-	 int rtn=-1;
+				int employee_setId(Employee* this, int id)
+				{
+					int rtn = -1;
 
+					if (id > 0 && this != NULL)
+					{
+						this->id = id;
+						rtn = 0;
+					}
 
-	    if( horasTrabajadas > 0 && this != NULL)
-	    {
-	        this->horasTrabajadas = horasTrabajadas;
-	        rtn=0;
-	    }
+					return rtn;
+				}
+				int employee_getId(Employee* this,int* id)
+				{
+					int rtn=-1;
 
-	    return rtn;
+					    if( this != NULL && id>0)
+					    {
+					        *id= this->id;
+					        rtn=0;
 
-}
-int employee_setSueldo(Employee* this,int sueldo)
-{
-	 int rtn=-1;
+					    }
 
+					    return rtn;
+				}
+				int employee_setNombre(Employee* this, char* nombre)
+				{
+					int rtn = -1;
 
-		    if( sueldo > 0 && this != NULL)
-		    {
-		        this->sueldo = sueldo;
-		        rtn=0;
-		    }
+					if (nombre > 0 && this != NULL && validarCadenaEspacios(nombre))
+					{
+						strcpy(this->nombre, nombre);
+						rtn = 0;
+					}
 
-		    return rtn;
-}
+					return rtn;
 
+				}
+				int employee_setHorasTrabajadas(Employee* this, int horasTrabajadas)
+				{
+					int rtn = -1;
 
+					if (horasTrabajadas > 0 && this != NULL)
+					{
+						this->horasTrabajadas = horasTrabajadas;
+						rtn = 0;
+					}
 
+					return rtn;
 
+				}
+				int employee_setSueldo(Employee* this, int sueldo)
+				{
+					int rtn = -1;
+
+					if (sueldo > 0 && this != NULL)
+					{
+						this->sueldo = sueldo;
+						rtn = 0;
+					}
+
+					return rtn;
+				}
 

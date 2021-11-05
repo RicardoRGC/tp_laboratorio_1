@@ -1,5 +1,8 @@
 #ifndef employee_H_INCLUDED
 #define employee_H_INCLUDED
+#include <stdio.h>
+#include <stdlib.h>
+#include "LinkedList.h"
 typedef struct
 {
     int id;
@@ -8,8 +11,12 @@ typedef struct
     int sueldo;
 }Employee;
 
+void mostrarUnEmpleado(Employee* this);
+int parser_EmployeeFromBinary(FILE* pFile, LinkedList* pArrayListEmployee);
+int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee);
+
 Employee* employee_new();
-Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr);
+Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr,char* sueldo);
 void employee_delete();
 
 int employee_setId(Employee* this,int id);

@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <limits.h>
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Employee.h"
@@ -25,8 +28,8 @@ int main() {
 
 	LinkedList *listaEmpleados = ll_newLinkedList();
 	do {
-		if (getNumero(&option, "1.\n"
-				"2.\n"
+		if (getNumero(&option, "1.Cargar los datos de los empleados desde el archivo data.csv (modo texto)\n"
+				"2.Cargar los datos de los empleados desde el archivo data.csv (modo binario).\n"
 				"3.Alta Empleado\n"
 				"4.Modificar Datos Empleado\n"
 				"5.Baja de Empleado\n"
@@ -40,17 +43,31 @@ int main() {
 
 		switch (option) {
 		case 1:
-			controller_loadFromText("data.csv", listaEmpleados);
+			if(controller_loadFromText("data.csv", listaEmpleados)!=-1)
+			{
+				printf("correcto\n");
+			}
+
 			break;
 		case 2:
-
+			if(controller_loadFromBinary("data.bin", listaEmpleados)!=-1)
+			{
+				printf("correcto");
+			}
+			else
+			{
+				printf("Error");
+			}
 			break;
 		case 3:
 
-			controller_addEmployee(listaEmpleados);
+			//controller_addEmployee(listaEmpleados);
+			controller_addEmployee1(listaEmpleados);
 
 			break;
 		case 4:
+			controller_ListEmployee(listaEmpleados);
+
 			controller_editEmployee(listaEmpleados);
 			break;
 		case 5:
@@ -66,7 +83,7 @@ int main() {
 
 			break;
 		case 9:
-
+			controller_saveAsBinary("data.bin", listaEmpleados);
 			break;
 
 		}

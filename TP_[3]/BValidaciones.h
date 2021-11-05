@@ -7,6 +7,7 @@
 
 #ifndef BVALIDACIONES_H_
 #define BVALIDACIONES_H_
+int validarCadenaNumerica(char nombre[]);
 /// @param cadena valida una cadena con minimo max
 /// @param longitud
 /// @param longMin

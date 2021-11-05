@@ -30,6 +30,26 @@ int validarCadenaEspacios(char nombre[])
 
 		return retorno;
 }
+int validarCadenaNumerica(char nombre[])
+{
+
+	int retorno;
+		int longitud;
+
+		retorno = 0;
+		longitud = strlen(nombre);
+
+		for (int i = 0; i < longitud; i++)
+		{
+			if (( isdigit(nombre[i]) )&& longitud!= 0)
+			{
+				retorno = 1;
+
+			}
+		}
+
+		return retorno;
+}
 int validarCadena(char nombre[])
 {
 
