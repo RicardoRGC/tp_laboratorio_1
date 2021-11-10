@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Employee.h"
+#include "B.h"
+#include "BValidaciones.h"
+#include "Controller.h"
+
+#define TAM 20
 
 /** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo texto).
  *
@@ -10,45 +15,44 @@
  * \return int
  *
  */
-int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
+
+int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee) // recorre el archivo y lo guardad en memoria dinamica heat
 {
-	int rtn = -1;
+
 
 	int conteoLineaArchivo = 0;
-	char idStr[20];
-	char nombreStr[20];
-	char horasTrabajadasStr[20];
-	char sueldoStr[20];
+	char idStr[TAM];
+	char nombreStr[TAM];
+	char horasTrabajadasStr[TAM];
+	char sueldoStr[TAM];
+	int rtn=-1;
 
-	if(pFile!=NULL)
+	if (pFile != NULL && pArrayListEmployee != NULL)
 	{
-		fscanf(pFile,"[^\n],[^\n]\n");
-	while (!feof(pFile))
-	{
-		conteoLineaArchivo = fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n] \n", idStr, nombreStr,
-						horasTrabajadasStr, sueldoStr);
-
-		if (conteoLineaArchivo == 4)
+		fscanf(pFile, "[^\n],[^\n]\n");
+		while (!feof(pFile))
 		{
-		Employee*empleado;
-			/*
-			empleado = employee_newParametros(idStr, nombreStr, horasTrabajadasStr, sueldoStr);
-			ll_add(pArrayListEmployee, empleado);*/
+			conteoLineaArchivo = fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n] \n", idStr, nombreStr,
+							horasTrabajadasStr, sueldoStr);
 
+			if (conteoLineaArchivo == 4 && validarCadenaNumerica(idStr) && validarCadena(nombreStr)
+							&& validarCadenaNumerica(horasTrabajadasStr) && validarCadenaNumerica(sueldoStr))
+			{
+				Employee*empleado;
 
-		    empleado= employee_newParametros(idStr, nombreStr, horasTrabajadasStr, sueldoStr);
+				empleado = employee_newParametros(idStr, nombreStr, horasTrabajadasStr, sueldoStr);
 
-		    if(empleado!=NULL)
-		    {
+				if (empleado != NULL)
+				{
+// corregir
+					ll_add(pArrayListEmployee, empleado);
 
-			ll_add(pArrayListEmployee, empleado);
+					rtn=0;
+				}
 
-
-
-		    }
-			rtn = 0;
+			}
 		}
-	}
+
 	}
 
 	fclose(pFile);
@@ -67,32 +71,28 @@ int parser_EmployeeFromBinary(FILE* pFile, LinkedList* pArrayListEmployee)
 {
 	int rtn = -1;
 
-	if(pFile != NULL&& pArrayListEmployee!=NULL)
+	if (pFile != NULL && pArrayListEmployee != NULL)
 	{
 		while (!feof(pFile))
 		{
 
 			{
-				Employee* empleado = employee_new();
+				Employee*empleado = employee_new();
 
-				rtn = fread(empleado, sizeof(Employee),1,pFile);
+				rtn = fread(empleado, sizeof(Employee), 1, pFile);
 
-				if(rtn==1)
+				if (rtn == 1)
 				{
 					ll_add(pArrayListEmployee, empleado);
-
 				}
-
 
 			}
 		}
 
 		rtn = 0;
-		printf("entro");
 	}
 
+	fclose(pFile);
 
-		fclose(pFile);
-
-		return rtn;
+	return rtn;
 }

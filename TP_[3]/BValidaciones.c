@@ -10,29 +10,9 @@
 #include <ctype.h>
 #include "B.h"
 #include "BValidaciones.h"
-int validarCadenaEspacios(char nombre[])
-{
 
-	int retorno;
-		int longitud;
-
-		retorno = 0;
-		longitud = strlen(nombre);
-
-		for (int i = 0; i < longitud; i++)
-		{
-			if ((isalpha(nombre[i]) || isdigit(nombre[i]) )&& longitud!= 0)
-			{
-				retorno = 1;
-
-			}
-		}
-
-		return retorno;
-}
 int validarCadenaNumerica(char nombre[])
 {
-
 	int retorno;
 		int longitud;
 
@@ -61,9 +41,12 @@ int validarCadena(char nombre[])
 
 	for (int i = 0; i < longitud; i++)
 	{
+		if(nombre[i]!=' ')
+		{
 		if (!isalpha(nombre[i]) || longitud == 0)
 		{
 			retorno = 0;
+		}
 		}
 	}
 

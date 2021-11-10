@@ -137,7 +137,7 @@ int getStringDireccion(char* eResultado, int tam, char* mensaje, char* mensajeEr
 			printf(mensaje);
 			fflush(stdin);
 
-			if (myGets(bufferChar, 50) == 0 && validarCadenaEspacios(bufferChar))
+			if (myGets(bufferChar, 50) == 0 && validarCadena(bufferChar))
 			{
 				strncpy(eResultado, bufferChar, tam);
 				retorno = 0;
@@ -197,7 +197,7 @@ int getStringNombreApellido(char* eResultado, int tam, char* mensaje, char* mens
 			printf(mensaje);
 			fflush(stdin);
 
-			if (myGets(bufferChar, 50) == 0 && validarCadenaEspacios(bufferChar))
+			if (myGets(bufferChar, 50) == 0 && validarCadena(bufferChar))
 			{
 				strncpy(eResultado, bufferChar, tam);
 				retorno = 0;
