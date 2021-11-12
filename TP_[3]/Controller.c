@@ -260,15 +260,22 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 
 	char seguir;
 	int id = 0;
-
+ char idMax[TAM];
 	int tamLista;
 	int idABorrar;
+	int idIntMax;
+	if(controller_loadTextId("archivoId.txt", idMax)!=-1)
+	{
+		idIntMax=atoi(idMax);
+	}
+
+
 
 	if (pArrayListEmployee != NULL)
 	{
 		Employee*auxEmpleado;
 		tamLista = ll_len(pArrayListEmployee);
-		getNumero(&idABorrar, "ingrese id a eliminar", "error id", 0, 1000,
+		getNumero(&idABorrar, "ingrese id a eliminar", "error id", 0,idIntMax ,
 		REINTENTOS);
 
 		for (int i = 0; i < tamLista; i++)
@@ -323,7 +330,7 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
 	if (pArrayListEmployee != NULL && len != 0)
 	{
 
-		printf("Id  Nombre  Hs.Trab.  Sueldo\n\n");
+		printf("Id    Nombre       Hs.Trab.  Sueldo\n\n");
 		for (int i = 0; i < len; i++)
 		{
 

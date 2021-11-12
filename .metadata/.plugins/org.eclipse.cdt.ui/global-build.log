@@ -36,3 +36,56 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c"
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o B.o "..\\B.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o BValidaciones.o "..\\BValidaciones.c" 
 gcc "-LC:\\Users\\riky\\Desktop\\tp1\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+09:41:13 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\riky\\Desktop\\tp1\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for TP_[3]
+09:43:02 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\riky\\Desktop\\tp1\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+09:44:43 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\riky\\Desktop\\tp1\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+09:54:02 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\riky\\Desktop\\tp1\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+09:54:41 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_removeEmployee':
+..\Controller.c:267:6: warning: unused variable 'idIntMax' [-Wunused-variable]
+  int idIntMax=atoi(idMax);
+      ^~~~~~~~
+gcc "-LC:\\Users\\riky\\Desktop\\tp1\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+09:55:37 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\riky\\Desktop\\tp1\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+09:56:22 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\riky\\Desktop\\tp1\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+09:57:43 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\riky\\Desktop\\tp1\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+10:03:21 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\riky\\Desktop\\tp1\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+10:04:10 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\riky\\Desktop\\tp1\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+10:06:04 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\riky\\Desktop\\tp1\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe B.o BValidaciones.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for TP_[3]

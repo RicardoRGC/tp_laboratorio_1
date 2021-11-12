@@ -110,7 +110,7 @@ void printOne(Employee* this)
 						&&employee_getHorasTrabajadas(this, &horasTrabajadas) !=-1
 						&&employee_getSueldo(this, &sueldo) !=-1)
 		{
-			printf("%-5d  %-5s  %-5d  %d \n", id, nombre, horasTrabajadas, sueldo);
+			printf("%-5d  %-15s  %-5d  %d \n", id, nombre, horasTrabajadas, sueldo);
 		}
 
 	}
