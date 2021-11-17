@@ -257,20 +257,17 @@ int ll_remove(LinkedList* this, int index)
 			if (index == 0) //
 			{
 				this->pFirstNode = auxNodo->pNextNode;
-				free(auxNodo);
-				this->size--;
-				returnAux = 0;
 			}
 			else
 			{
 
 				Node*auxNodoAnterior = getNode(this, index - 1);
 				auxNodoAnterior->pNextNode = auxNodo->pNextNode;
-				free(auxNodo);
-				this->size--;
-				returnAux = 0;
 
 			}
+			free(auxNodo);
+			this->size--;
+			returnAux = 0;
 
 		}
 
@@ -298,11 +295,12 @@ int ll_clear(LinkedList* this)
 	int len = ll_len(this);
 	if (this != NULL)
 	{
-		for (int i = 0; i < len; i++)
+		for (int i = len; i >= 0; i--)
 		{
 			ll_remove(this, i);
-			returnAux = 0;
+
 		}
+		returnAux = 0;
 	}
 
 	return returnAux;
@@ -325,16 +323,14 @@ int ll_deleteLinkedList(LinkedList* this)
 
 	if (this != NULL)
 	{
+		returnAux = 1;
+
 		if (!ll_clear(this))
 		{
 			returnAux = 0;
-		}
-		else
-		{
-			returnAux = 1;
+			free(this);
 		}
 
-		free(this);
 	}
 
 	return returnAux;
@@ -357,15 +353,14 @@ int ll_indexOf(LinkedList* this, void* pElement)
 	 *
 	 */
 	int returnAux = -1;
-	Node*auxNodo = NULL;
 
 	int len = ll_len(this);
 	if (this != NULL)
 	{
+
 		for (int i = 0; i < len; i++)
 		{
-			auxNodo = getNode(this, i);
-			if (auxNodo->pElement == pElement)
+			if (ll_get(this, i) == pElement) //arreglar
 			{
 				returnAux = i;
 			}
@@ -391,17 +386,16 @@ int ll_isEmpty(LinkedList* this)
 	 *
 	 */
 	int returnAux = -1;
-	if (this != NULL && this->size == 0)
+
+	if (this != NULL)
 	{
-		returnAux = 1;
-	}
-	else
-	{
-		if (this != NULL && this->size > 0)
+		returnAux = 0;
+		if (this->size == 0)
 		{
-			returnAux = 0;
+			returnAux = 1;
 		}
 	}
+
 	return returnAux;
 }
 
@@ -509,6 +503,8 @@ int ll_containsAll(LinkedList* this, LinkedList* this2)
 			if (!ll_contains(this, pElement))
 			{
 				returnAux = 0;
+				break;
+
 			}
 		}
 	}
@@ -536,7 +532,8 @@ LinkedList* ll_subList(LinkedList* this, int from, int to)
 	LinkedList*cloneArray = NULL;
 	void*pElement;
 
-	if (this != NULL && from >= 0 && to <= ll_len(this))
+	if (this != NULL && from >= 0 && to <= ll_len(this) && from < ll_len(this)
+					&& to >= 0)
 	{
 		cloneArray = ll_newLinkedList();
 		for (int i = from; i < to; i++)
@@ -564,16 +561,12 @@ LinkedList* ll_clone(LinkedList* this)
 	 nuevo array.
 	 */
 	LinkedList*cloneArray = NULL;
-	void*pElement;
 
 	if (this != NULL)
 	{
 		cloneArray = ll_newLinkedList();
-		for (int i = 0; i < ll_len(this); i++)
-		{
-			pElement = ll_get(this, i);
-			ll_add(cloneArray, pElement);
-		}
+
+		cloneArray = ll_subList(this, 0, ll_len(this));
 
 	}
 	return cloneArray;
@@ -586,17 +579,39 @@ LinkedList* ll_clone(LinkedList* this)
  * \return int Retorna  (-1) Error: si el puntero a la listas es NULL
  ( 0) Si ok
  */
-int ll_sort(LinkedList* this, int (*pFunc)(void*, void*), int order)
+int ll_sort(LinkedList* this, int (*pFunc)(void*, void*), int order) // 1 si es mayor -  -1 si es menor.
 {
 	/*
 	 * Ordena los elementos del array recibiendo como parámetro la función que sera la encargada
-de determinar que elemento es mas grande que otro y si se debe ordenar de manera
-ascendente o descendente. Verificando que tanto el puntero this como el puntero a la funcion
-pFunc sean distintos de NULL. Si la verificación falla (-1) caso contrario retorna (1).
+	 de determinar que elemento es mas grande que otro y si se debe ordenar de manera
+	 ascendente o descendente. Verificando que tanto el puntero this como el puntero a la funcion
+	 pFunc sean distintos de NULL. Si la verificación falla (-1) caso contrario retorna (1).
 	 */
 	int returnAux = -1;
+	int tam;
+	void*auxI = NULL;
+	void*auxJ = NULL;
+	if (this != NULL && pFunc != NULL && (order == 0 || order == 1))// mi funcion retorna 1 y -1
+	{
+		tam = ll_len(this);
+		for (int i = 0; i < tam - 1; i++)
+		{
+			for (int j = i + 1; j < tam; j++)
+			{
+				auxI = ll_get(this, i);
+				auxJ = ll_get(this, j);
 
+				if ((pFunc(auxI, auxJ) < 0 && !order)
+								|| (pFunc(auxI, auxJ) > 0 && order)) //
+				{
+					ll_set(this, i, auxJ);
+					ll_set(this, j, auxI);
+				}
+
+			}
+		}
+		returnAux = 0;
+	}
 	return returnAux;
-
 }
 
