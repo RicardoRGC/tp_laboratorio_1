@@ -111,8 +111,8 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 		REINTENTOS) != -1
 						&& getStringInt(horasTrabajadas, TAM, "ingrese horas trabajadas",
 										"error", REINTENTOS) != -1
-						&& getStringInt(sueldo, TAM, "ingrese sueldo", "error", REINTENTOS)
-										!= -1
+						&& getStringInt(sueldo, TAM, "ingrese sueldo", "error",
+						REINTENTOS) != -1
 						&& autoincrementarId("archivoId.txt", &intId, id) != -1)
 		{
 
@@ -161,87 +161,93 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
 	int horasTrabajadas;
 	int sueldo;
 	int tamLista;
-
+	int idIntMax;
+	char idMax[TAM];
+	if (controller_loadTextId("archivoId.txt", idMax) != -1)
+	{
+		idIntMax = atoi(idMax);
+	}
 	Employee*empleadoAux = employee_new();
 
 	if (pArrayListEmployee != NULL)
 	{
 		tamLista = ll_len(pArrayListEmployee);
 
-		getNumero(&idAEditar, "ingrese id a editar", "error id", 0, 1000,
-		REINTENTOS);
-
-		for (int i = 0; i < tamLista; i++)
+		if (getNumero(&idAEditar, "ingrese id a editar\n", "error id", 0, idIntMax,
+		REINTENTOS) != -1)
 		{
-			empleadoAux = (Employee*) ll_get(pArrayListEmployee, i);
-			rtn = employee_getId(empleadoAux, &id);
 
-			if (rtn != -1)
+			for (int i = 0; i < tamLista; i++)
 			{
-				if (id == idAEditar)
+				empleadoAux = (Employee*) ll_get(pArrayListEmployee, i);
+				rtn = employee_getId(empleadoAux, &id);
+
+				if (rtn != -1)
 				{
-					printOne(empleadoAux);
-					int menu;
-do
-{
-
-					getNumero(&menu, "1. nombre\n"
-									"2. horas trabajadas\n"
-									"3. sueldo\n"
-									"0.salir"
-
-					, "error ", 0, 3, REINTENTOS);
-
-					switch (menu)
+					if (id == idAEditar)
 					{
-
-					case 1:
-
-						if(getString(nombre, TAM, "ingrese nombre", "Error", REINTENTOS)!=-1&&employee_setNombre(empleadoAux, nombre)!=-1)
+						printOne(empleadoAux);
+						int menu;
+						do
 						{
-							printf("modificacion Exitosa\n");
+							if (getNumero(&menu, "1. nombre\n"
+											"2. horas trabajadas\n"
+											"3. sueldo\n"
+											"0.salir"
+
+							, "error ", 0, 3, REINTENTOS) == -1)
+							{
+								menu = 0;
+							}
+
+							switch (menu)
+							{
+
+							case 1:
+
+								if (getString(nombre, TAM, "ingrese nombre", "Error",
+								REINTENTOS) != -1
+												&& employee_setNombre(empleadoAux, nombre) != -1)
+								{
+									printf("modificacion Exitosa\n");
+								}
+
+								break;
+							case 2:
+
+								getNumero(&horasTrabajadas, "ingrese horas trabajadas", "Error",
+												1, 1000, REINTENTOS);
+								if (employee_setHorasTrabajadas(empleadoAux, horasTrabajadas)
+												!= -1)
+								{
+									printf("modificacion Exitosa\n");
+								}
+
+								break;
+							case 3:
+								getNumero(&sueldo, "ingrese sueldo", "Error", 1, 500000,
+								REINTENTOS);
+								if (employee_setSueldo(empleadoAux, sueldo) != -1)
+								{
+									printf("modificacion Exitosa\n");
+								}
+
+								break;
+
+							}
 						}
+						while (menu != 0);
 
-
+						rtn = ll_set(pArrayListEmployee, i, empleadoAux);
 						break;
-					case 2:
-
-						getNumero(&horasTrabajadas, "ingrese horas trabajadas", "Error", 1,
-										1000, REINTENTOS);
-						if(employee_setHorasTrabajadas(empleadoAux, horasTrabajadas)!=-1)
-						{
-							printf("modificacion Exitosa\n");
-						}
-
-
-
-						break;
-					case 3:
-						getNumero(&sueldo, "ingrese sueldo", "Error", 1, 500000, REINTENTOS);
-						if(employee_setSueldo(empleadoAux, sueldo)!=-1)
-						{
-							printf("modificacion Exitosa\n");
-						}
-
-
-						break;
-
 					}
-}while(menu!=0);
-
-					rtn = ll_set(pArrayListEmployee, i, empleadoAux);
-					break;
+				}
+				else
+				{
+					free(empleadoAux);
 				}
 			}
-			else
-			{
-				free(empleadoAux);
-			}
 		}
-	}
-	else
-	{
-		printf("No hay Datos\n\n");
 	}
 
 	return rtn;
@@ -260,52 +266,50 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 
 	char seguir;
 	int id = 0;
- char idMax[TAM];
 	int tamLista;
 	int idABorrar;
 	int idIntMax;
-	if(controller_loadTextId("archivoId.txt", idMax)!=-1)
+	char idMax[TAM];
+	if (controller_loadTextId("archivoId.txt", idMax) != -1)
 	{
-		idIntMax=atoi(idMax);
+		idIntMax = atoi(idMax);
 	}
-
-
 
 	if (pArrayListEmployee != NULL)
 	{
 		Employee*auxEmpleado;
 		tamLista = ll_len(pArrayListEmployee);
-		getNumero(&idABorrar, "ingrese id a eliminar", "error id", 0,idIntMax ,
-		REINTENTOS);
-
-		for (int i = 0; i < tamLista; i++)
+		if (getNumero(&idABorrar, "ingrese id a eliminar", "error id", 0, idIntMax,
+		REINTENTOS) != -1)
 		{
-
-			auxEmpleado = (Employee*) ll_get(pArrayListEmployee, i);
-			rtn = employee_getId(auxEmpleado, &id);
-
-			if (id == idABorrar)
+			for (int i = 0; i < tamLista; i++)
 			{
-				printOne(auxEmpleado);
 
-				printf("\nConfima borrado s/n: ");
-				fflush(stdin);
-				scanf("%c", &seguir);
+				auxEmpleado = (Employee*) ll_get(pArrayListEmployee, i);
+				rtn = employee_getId(auxEmpleado, &id);
 
-				if (seguir == 'n')
+				if (id == idABorrar)
 				{
-					printf("Baja cancelada\n\n");
+					printOne(auxEmpleado);
+					if (getString(&seguir, 20, "\nConfima borrado s/n: ", "error \n",
+					REINTENTOS) != -1)
+					{
+
+						if (seguir == 'n')
+						{
+							printf("Baja cancelada\n\n");
+						}
+						else
+
+						{
+
+							ll_remove(pArrayListEmployee, i);
+							employee_delete(auxEmpleado);
+
+						}
+					}
+					break;
 				}
-				else
-
-				{
-
-					ll_remove(pArrayListEmployee, i);
-					employee_delete(auxEmpleado);
-
-				}
-
-				break;
 			}
 		}
 	}
@@ -338,8 +342,6 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
 
 			printOne(Aux);
 
-
-
 		}
 		rtn = 0;
 	}
@@ -357,20 +359,20 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
 	int rtn = -1;
 	int menu;
-	if (pArrayListEmployee != NULL)
+	if (pArrayListEmployee != NULL
+					&& getNumero(&menu, "1. ordenarId menor a mayor \n"
+									"2. ordenarId mayor a menor\n"
+									"3. ordenar por Nombre a-z\n"
+									"4. ordenar por Nombre z-a\n"
+									"5. ordenar por horas trabajadas menor a mayor\n"
+									"6. ordenar por horas trabajadas mayor a menor\n"
+									"7. ordenar por sueldo  menor a mayor  \n"
+									"8. ordenar por sueldo mayor a menor \n"
+									"0.salir"
+
+					, "error\n ", 0, 8, REINTENTOS) != -1)
 	{
 
-		getNumero(&menu, "1. ordenarId menor a mayor \n"
-						"2. ordenarId mayor a menor\n"
-						"3. ordenar por Nombre a-z\n"
-						"4. ordenar por Nombre z-a\n"
-						"5. ordenar por horas trabajadas menor a mayor\n"
-						"6. ordenar por horas trabajadas mayor a menor\n"
-						"7. ordenar por sueldo  menor a mayor  \n"
-						"8. ordenar por sueldo mayor a menor \n"
-						"0.salir"
-
-		, "error ", 0, 3, REINTENTOS);
 		switch (menu)
 		{
 		case 1:
@@ -446,18 +448,17 @@ int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
 		{
 
 			Employee*pEmployee = employee_new();
-
+			fprintf(pFile, "%s,%s,%s,%s\n", "id", "nombre", "horas", "sueldo");
 			for (int i = 0; i < tamLista; i++)
 			{
 				pEmployee = (Employee*) ll_get(pArrayListEmployee, i);
-if(employee_getId(pEmployee, &id)!=-1
-				&&employee_getNombre(pEmployee, nombre) !=-1
-				&&employee_getHorasTrabajadas(pEmployee, &horasTrabajadas) !=-1
-				&&employee_getSueldo(pEmployee, &sueldo) !=-1)
-{
-	fprintf(pFile, "%d, %s, %d, %d\n",id,nombre,
-					horasTrabajadas, sueldo); //Se escribe al archivo
-}
+				if (employee_getId(pEmployee, &id) != -1
+								&& employee_getNombre(pEmployee, nombre) != -1
+								&& employee_getHorasTrabajadas(pEmployee, &horasTrabajadas)
+												!= -1 && employee_getSueldo(pEmployee, &sueldo) != -1)
+				{
+					fprintf(pFile, "%d,%s,%d,%d\n", id, nombre, horasTrabajadas, sueldo); //Se escribe al archivo
+				}
 
 			}
 			rtn = 0;

@@ -41,7 +41,7 @@ int validarCadena(char nombre[])
 
 	for (int i = 0; i < longitud; i++)
 	{
-		if(nombre[i]!=' ')
+		if(nombre[0]==' '|| nombre[i]!=' ')
 		{
 		if (!isalpha(nombre[i]) || longitud == 0)
 		{
